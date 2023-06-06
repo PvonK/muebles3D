@@ -1,0 +1,100 @@
+<!--
+   Copyright 2021 Google LLC
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+-->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.google.ar.core.examples.java.helloar.HelloArActivity">
+
+  <android.opengl.GLSurfaceView
+      android:id="@+id/surfaceview"
+      android:layout_width="fill_parent"
+      android:layout_height="fill_parent"
+      android:layout_gravity="top"
+      app:layout_constraintBottom_toBottomOf="@+id/button_move_backward"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
+  <ImageButton
+      android:id="@+id/settings_button"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentTop="true"
+      android:layout_alignParentEnd="true"
+      android:layout_margin="25dp"
+      android:background="@android:color/transparent"
+      android:src="@drawable/ic_settings"
+      app:layout_constraintEnd_toEndOf="@+id/surfaceview"
+      app:layout_constraintTop_toTopOf="@+id/surfaceview" />
+
+  <Button
+      android:id="@+id/button_move_forward"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Move Forward"
+      app:layout_constraintBottom_toTopOf="@+id/button_move_backward"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent" />
+
+  <Button
+      android:id="@+id/button_move_backward"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Move Backward"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="@+id/surfaceview"
+      app:layout_constraintStart_toStartOf="parent"/>
+
+  <Button
+      android:id="@+id/button_move_left"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Move Left"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toStartOf="@+id/button_move_backward"
+      app:layout_constraintStart_toStartOf="parent" />
+
+  <Button
+      android:id="@+id/button_move_right"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Move Right"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toEndOf="@+id/button_move_backward" />
+
+  <Button
+      android:id="@+id/button_rotate_right"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Rotate Right"
+      app:layout_constraintBottom_toTopOf="@+id/button_move_right"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toEndOf="@+id/button_move_forward" />
+
+  <Button
+      android:id="@+id/button_rotate_left"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Rotate Left"
+      app:layout_constraintBottom_toTopOf="@+id/button_move_left"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toStartOf="@+id/button_move_forward" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
